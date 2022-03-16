@@ -15,8 +15,8 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(executable_path=DRIVER_PATH), options=options)
 driver.get(URL)
 
-# I ONLY DOING THIS IN PRACTICE MODE - I AINT A SCUMBAG. Unless........<.<
 try:
+    # I ONLY DOING THIS IN PRACTICE MODE - I AINT A SCUMBAG. Unless........<.<
     practice_btn = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gwt-uid-2"]/a')))
     practice_btn.click()
 except Exception as e:
